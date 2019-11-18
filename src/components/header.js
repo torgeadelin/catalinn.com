@@ -1,34 +1,66 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from 'styled-components'
+import theme from '../theme'
+import Img from "gatsby-image"
+
+
+
+const HeaderWrapper = styled.header`
+  padding-top: ${theme.space[6]}px;
+  display: flex;
+  justify-content: space-between;
+`
+
+const MenuItem = styled.p`
+  margin-right: ${theme.space[6]}px;
+  font-weight: bold;
+  display: inline-block;
+  opacity: ${p => p.active ? 1 : 0.5};
+  cursor: pointer;
+  transition: 0.3s ease-in;
+
+  :hover {
+    transition: 0.3s ease-in;
+    opacity: 1;
+  }
+`
+
+const Social = styled.a`
+  margin-left: ${theme.space[5]}px;
+`
+
+const menuItems = [
+  "Home",
+  "About",
+  "Projects",
+  "Blog(soon)"
+]
+
+const social = {
+  "Twitter": "https://twitter.com/torgeadelin",
+  "Github": "https://github.com/torgeadelin"
+}
+
+
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+  <div className="container">
+    <HeaderWrapper>
+      <div>
+        {menuItems.map((item, index) =>
+          <MenuItem active={index == 0} key={index} href="">{item}</MenuItem>
+        )}
+      </div>
+      <div>{Object.entries(social).map(([key, value]) =>
+        <Social href={value}>{key}</Social>
+      )}
+      </div>
+
+    </HeaderWrapper>
+  </div>
+
 )
 
 Header.propTypes = {

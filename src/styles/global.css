@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "CircularStd-Black";
+  src: url("../fonts/CircularStd-Black.woff2");
+}
+
+@font-face {
+  font-family: "CircularStd-BlackItalic";
+  src: url("../fonts/CircularStd-BlackItalic.woff2");
+}
+
+@font-face {
+  font-family: "CircularStd-Bold";
+  src: url("../fonts/CircularStd-Bold.woff2");
+}
+
+@font-face {
+  font-family: "CircularStd-BoldItalic";
+  src: url("../fonts/CircularStd-BoldItalic.woff2");
+}
+
+@font-face {
+  font-family: "CircularStd-Book";
+  src: url("../fonts/CircularStd-Book.woff2");
+}
+@font-face {
+  font-family: "CircularStd-BookItalic";
+  src: url("../fonts/CircularStd-BookItalic.woff2");
+}
+
+@font-face {
+  font-family: "CircularStd-Medium";
+  src: url("../fonts/CircularStd-Medium.woff2");
+}
+
+@font-face {
+  font-family: "Font CircularStd-MediumItalic";
+  src: url("../fonts/CircularStd-MediumItalic.woff2");
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1166px;
+  padding-top: 0;
+  padding: 0px 1.0875rem 1.45rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: "CircularStd-Book";
+  border-bottom: 0.9px solid black;
+  padding-bottom: 0.5px;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 28pt;
+}
+
+h2 {
+  font-size: 20pt;
+}
