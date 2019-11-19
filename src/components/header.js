@@ -54,7 +54,7 @@ const Header = ({ siteTitle }) => (
         )}
       </div>
       <div>{Object.entries(social).map(([key, value]) =>
-        <Social href={value}>{key}</Social>
+        <Social href={value} key={value}>{key}</Social>
       )}
       </div>
 

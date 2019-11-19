@@ -54,12 +54,25 @@ a {
 
 p {
   font-size: 16px;
+  line-height: normal;
+  margin: 0px 0px 4px 0px;
 }
 
 h1 {
-  font-size: 28pt;
+  font-size: 28px;
+  line-height: normal;
 }
 
 h2 {
-  font-size: 20pt;
+  font-size: 20px;
+  line-height: normal;
+}
+
+.title {
+  font-size: 64px;
+  font-family: "CircularStd-Bold";
+}
+
+.description {
+  font-size: 14px;
 }
