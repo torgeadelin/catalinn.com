@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import "../styles/global.css"
+import theme from "../theme"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,16 +28,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        className="container"
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+
+      <main>{children}</main>
+      <footer>
+        <div style={{ "padding": theme.space[5] }} className="container">
+          © {new Date().getFullYear()}, Catalin Torge. All rights reserved.
+        </div>
+      </footer>
     </>
   )
 }

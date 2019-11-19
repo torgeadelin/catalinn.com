@@ -28,7 +28,7 @@ export const fontWeight = { regular, bold };
 
 // styled-system’s `borderRadius` function can hook into the `radii` object/array
 export const pill = "9999px";
-export const radii = ["0px", "2px", "3px", "8px", "16px", pill];
+export const radii = ["0px", "2px", "3px", "8px", "10px", pill];
 export const scaleFactor = 17 / 16;
 
 export const maxWidths = [128, 256, 512, 1024];

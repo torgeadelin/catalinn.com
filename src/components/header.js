@@ -50,7 +50,9 @@ const Header = ({ siteTitle }) => (
     <HeaderWrapper>
       <div>
         {menuItems.map((item, index) =>
-          <MenuItem active={index == 0} key={index} href="">{item}</MenuItem>
+          <MenuItem active={index == 0} key={index} href="">
+            <Link to={"/" + item.toLowerCase()}>{item}</Link>
+          </MenuItem>
         )}
       </div>
       <div>{Object.entries(social).map(([key, value]) =>

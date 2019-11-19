@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from 'styled-components'
+
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -9,6 +12,7 @@ import Flex from "../components/flex"
 import theme from "../theme"
 
 import Space from '../components/space'
+import Project from "../components/project"
 
 const experience = [
   {
@@ -55,6 +59,38 @@ const studies = [
 
 ]
 
+
+
+const Projects = () => {
+  const data = useStaticQuery(graphql`
+    query NonPageQuery {
+      allProject {
+        nodes {
+            name,
+            type,
+            date,
+            description,
+            techStack,
+        }
+      }
+    }
+  `)
+  console.log(data)
+  return (
+    data.allProject.nodes.slice(0, 3).map((project, index) =>
+      <Project
+        fixedHeight
+        key={index}
+        name={project.name}
+        type={project.type}
+        date={project.date}
+        description={project.description}
+        techStack={project.techStack}
+      />)
+  )
+}
+
+
 const Item = (props) => (
   <Flex mb={[4]}>
     <img style={{ "marginRight": theme.space[4] }} src={props.img} width="45px" height="45px" />
@@ -66,35 +102,51 @@ const Item = (props) => (
   </Flex>
 )
 
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <p className="description">ABOUT ME</p>
-    <h1>Education and Experience</h1>
-    <Flex wrap="wrap">
-      <div>
-        <Flex mr={[0, 8, 8]} />
-        <h2 style={{ marginBottom: theme.space[5] }}>Work Experience</h2>
-        {experience.map((job, index) =>
-          <Item key={index} img={job.img} title={job.title} name={job.company} period={job.period} />
-        )}
-      </div>
-      <div>
-        <h2 style={{ marginBottom: theme.space[5] }}>Studies</h2>
-        {studies.map((stud, index) =>
-          <Item key={index} img={stud.img} title={stud.name} name={stud.degree} period={stud.period} />
-        )}
-      </div>
-    </Flex>
+    <div className="container">
+      <p className="description">ABOUT ME</p>
+      <h1>Education and Experience</h1>
+      <Flex wrap="wrap">
+        <div>
+          <Flex mr={[0, 8, 8]} />
+          <h2 style={{ marginBottom: theme.space[5] }}>Work Experience</h2>
+          {experience.map((job, index) =>
+            <Item key={index} img={job.img} title={job.title} name={job.company} period={job.period} />
+          )}
+        </div>
+        <div>
+          <h2 style={{ marginBottom: theme.space[5] }}>Studies</h2>
+          {studies.map((stud, index) =>
+            <Item key={index} img={stud.img} title={stud.name} name={stud.degree} period={stud.period} />
+          )}
+        </div>
+      </Flex>
+      <Space mb={[6]} />
 
+    </div>
 
-    <Space mb={[6]} />
-    <p className="description">PROJECTS</p>
-    <h1>Personal and Professional Projects</h1>
-    <p>Soon...</p>
+    <div style={{ "backgroundColor": theme.colors.gray200 }}>
+      <Space pt={[6]} />
+      <div className="container">
+
+        <p className="description">PROJECTS</p>
+        <h1>Personal and Professional Projects</h1>
+        <p>Latest Projects</p>
+        <Flex justify="space-between" wrap="wrap" py={[4]}>
+          <Projects />
+        </Flex>
+        <Link to="/projects">View All</Link>
+
+      </div>
+    </div>
     <br />
-    <Link to="/page-2/">Go to page 2</Link>
+
+    <div className="container">
+    </div>
   </Layout >
 )
 

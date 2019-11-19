@@ -39,7 +39,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1166px;
+  max-width: 1266px;
   padding-top: 0;
   padding: 0px 1.0875rem 1.45rem;
 }
@@ -50,12 +50,14 @@ a {
   font-family: "CircularStd-Book";
   border-bottom: 0.9px solid black;
   padding-bottom: 0.5px;
+  transition: 0.3s ease-in-out;
 }
 
 p {
   font-size: 16px;
   line-height: normal;
   margin: 0px 0px 4px 0px;
+  white-space: pre-line;
 }
 
 h1 {
@@ -75,4 +77,17 @@ h2 {
 
 .description {
   font-size: 14px;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
 }

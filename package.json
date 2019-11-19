@@ -19,6 +19,8 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
+    "react-masonry-component": "^6.2.1",
+    "react-masonry-css": "^1.0.14",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.2"
   },
