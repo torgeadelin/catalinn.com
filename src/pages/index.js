@@ -8,6 +8,7 @@ import Hero from "../components/hero"
 import Flex from "../components/flex"
 import theme from "../theme"
 
+import Space from '../components/space'
 
 const experience = [
   {
@@ -69,7 +70,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <p className="description">About Me</p>
+    <p className="description">ABOUT ME</p>
     <h1>Education and Experience</h1>
     <Flex wrap="wrap">
       <div>
@@ -86,6 +87,13 @@ const IndexPage = () => (
         )}
       </div>
     </Flex>
+
+
+    <Space mb={[6]} />
+    <p className="description">PROJECTS</p>
+    <h1>Personal and Professional Projects</h1>
+    <p>Soon...</p>
+    <br />
     <Link to="/page-2/">Go to page 2</Link>
   </Layout >
 )
