@@ -36,6 +36,7 @@ const Projects = () => {
                 date={project.date}
                 description={project.description}
                 techStack={project.techStack}
+                selected={index}
             />)
     )
 }
