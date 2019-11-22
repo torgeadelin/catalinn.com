@@ -71,6 +71,8 @@ const Projects = () => {
             date,
             description,
             techStack,
+            projectId,
+            demo
         }
       }
     }
@@ -86,6 +88,8 @@ const Projects = () => {
         date={project.date}
         description={project.description}
         techStack={project.techStack}
+        projectId={project.projectId}
+        demo={project.demo}
       />)
   )
 }

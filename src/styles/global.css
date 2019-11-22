@@ -73,6 +73,8 @@ h2 {
 .title {
   font-size: 64px;
   font-family: "CircularStd-Bold";
+  line-height: normal;
+  max-width: 600px;
 }
 
 .description {

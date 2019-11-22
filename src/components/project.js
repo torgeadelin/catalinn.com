@@ -72,9 +72,9 @@ function Project(props) {
 
             </Wrapper>
             <Buttons>
-                <Link to={{ pathname: '/project', state: { selected: props.selected } }}>Details</Link>
+                <Link to={"/project/" + props.projectId}>Details</Link>
                 <Divider />
-                <Link to="/">Final Product</Link>
+                <Link to={props.demo}>Final Product</Link>
 
             </Buttons>
         </OuterWrapper >

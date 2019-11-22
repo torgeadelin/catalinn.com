@@ -16,11 +16,13 @@ const Projects = () => {
       query ProjectsQuery {
         allProject {
           nodes {
+              projectId,
               name,
               type,
               date,
               description,
               techStack,
+              demo,
           }
         }
       }
@@ -29,6 +31,8 @@ const Projects = () => {
     return (
         data.allProject.nodes.map((project, index) =>
             <Project
+                projectId={project.projectId}
+                demo={project.demo}
                 fixedHeight={true}
                 key={index}
                 name={project.name}
@@ -62,12 +66,6 @@ const ProjectsPage = () => (
 
             </div>
         </Wrapper>
-
-
-
-
-
-
 
     </Layout>
 )
