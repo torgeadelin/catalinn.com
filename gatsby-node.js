@@ -18,7 +18,7 @@ const projects = [{
     demo: "www.github.com/torgeaelin/project",
     git: "www.github.com/torgeaelin/project",
     gitTags: ["https://badge.fury.io/js/react-native-animated-nav-tab-bar.svg", "https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat", "https://img.shields.io/npm/dw/react-native-animated-nav-tab-bar.svg"],
-    images: [""]
+    images: ["vrinda1", "vrinda2", "vrinda3", "vrinda4", "vrinda5"]
 }, {
     id: 1,
     name: "React Native Animated Nav Tab Bar",
@@ -30,7 +30,7 @@ const projects = [{
     demo: "",
     git: "",
     gitTags: [],
-    images: [""]
+    images: []
 },
 {
     id: 2,
@@ -43,7 +43,7 @@ const projects = [{
     demo: "",
     git: "",
     gitTags: [],
-    images: [""]
+    images: []
 },
 {
     id: 3,
@@ -56,7 +56,7 @@ const projects = [{
     demo: "",
     git: "",
     gitTags: [],
-    images: [""]
+    images: []
 },
 {
     id: 4,
@@ -69,7 +69,7 @@ const projects = [{
     demo: "",
     git: "",
     gitTags: [],
-    images: [""]
+    images: []
 },
 {
     id: 5,
@@ -82,9 +82,10 @@ const projects = [{
     demo: "",
     git: "",
     gitTags: [],
-    images: [""]
+    images: []
 },
 ]
+
 
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 

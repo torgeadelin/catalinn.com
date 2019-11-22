@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space } from 'styled-system'
+import { layout } from 'styled-system'
 import theme from '../theme'
 import Space from './space'
 import { Link } from 'gatsby'
@@ -47,14 +47,13 @@ const Buttons = styled.div`
 `
 
 const OuterWrapper = styled.div`
-    width: 375px;
     margin-bottom: ${theme.space[5]}px;
-
+    ${layout};
 `
 
 function Project(props) {
     return (
-        <OuterWrapper>
+        <OuterWrapper width={[1, 1, 375]} >
             <Wrapper {...props}>
                 <h1>{props.name}</h1>
                 <p>{props.type}</p>
@@ -66,7 +65,7 @@ function Project(props) {
                 <strong>Tech Stack</strong>
                 <ImagesWrapper>
                     {props.techStack.map((img, index) => (
-                        <img key={index} src={require("../images/tech/" + img + ".png")} width="27px" height="27px" />
+                        <img key={index} alt={img} src={require("../images/tech/" + img + ".png")} width="27px" height="27px" />
                     ))}
                 </ImagesWrapper>
 
