@@ -24,6 +24,7 @@ const Button = styled.a`
     justify-content:center;
     ${layout};
     ${space};
+    
 
     :hover {
         background-color: ${theme.colors.black};
@@ -58,7 +59,7 @@ export default function projectDetails({ pageContext: { project } }) {
                     <div>{project.gitTags.map((tag, key) =>
                         <img key={key} src={tag} style={{ "marginRight": theme.space[3] }} />)}
                     </div>
-                    <Button width={[1, 180]} mb={[3, 0, 0]} href={project.demo}>Live Project</Button>
+                    <Button className={project.demo.toLowerCase() == "private" ? "disabled" : ""} width={[1, 180]} mb={[3, 0, 0]} href={project.demo}>Live Project</Button>
                 </Flex>
 
                 <p>{project.type}</p>
@@ -81,11 +82,13 @@ export default function projectDetails({ pageContext: { project } }) {
                     <div style={{ "marginBottom": theme.space[4] }}>
                         <strong>Source Code</strong>
                         <div>
-                            <a href={project.git}>{project.git}</a>
+                            <a className={project.git.toLowerCase() == "private" ? "disabled" : ""} href={project.git}>{project.git}</a>
                         </div>
 
                     </div>
                 </Flex>
+
+                <p>{project.details}</p>
                 <Space my={[5]} />
                 <strong>Images</strong>
                 <Space my={[3]} />
@@ -94,7 +97,7 @@ export default function projectDetails({ pageContext: { project } }) {
                     className="my-masonry-grid"
                     columnClassName="my-masonry-grid_column">
                     {project.images.length != 0 ? project.images.map((img, index) => (
-                        <img width="100%" key={index} src={require("../images/vrinda/" + img + ".png")} />
+                        <img width="100%" style={{ "border": "1px solid #E8E8E8" }} key={index} src={require("../images/projects/" + img)} />
                     )) : "N/A"}
                 </Masonry>
             </div>

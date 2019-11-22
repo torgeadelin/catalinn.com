@@ -6,7 +6,6 @@ import theme from '../theme'
 import Flex from "./flex"
 import Emoji from './emoji'
 import { Line } from './line'
-
 import memojiImg from '../images/memoji.png'
 
 const Wrapper = styled.div`
@@ -25,7 +24,7 @@ export default function Hero() {
                 <Flex wrap="wrap" direction="row">
                     <img style={{ "marginRight": theme.space[5] }} src={memojiImg} alt="Catalin Torge Facemoji" width="100px" height="176px" />
                     <Flex direction="column">
-                        <p className="title">Hello, <br /> I'm Catalin and I'm still working on this <Emoji symbol="🚧" label="construction sign" /></p>
+                        <p className="title">Hello, <br /> I'm Catalin</p>
                         <Line mb={[3]} />
                         <p>Currently Final Year Student <Emoji symbol="🎒" label="backpack" />@ King’s College London,<br /> Computer Science BSc <Emoji symbol="👨🏻‍💻" label="man technologist" /></p>
                     </Flex>

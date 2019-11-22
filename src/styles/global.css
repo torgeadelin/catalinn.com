@@ -81,6 +81,12 @@ h2 {
   font-size: 14px;
 }
 
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.3;
+}
+
 .my-masonry-grid {
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
@@ -92,4 +98,30 @@ h2 {
 .my-masonry-grid_column {
   padding-left: 30px; /* gutter size */
   background-clip: padding-box;
+}
+
+@media only screen and (max-width: 48rem) {
+  p {
+    font-size: 14px;
+    line-height: normal;
+    margin: 0px 0px 4px 0px;
+    white-space: pre-line;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .title {
+    font-size: 54px;
+    font-family: "CircularStd-Bold";
+    line-height: normal;
+    max-width: 600px;
+  }
 }

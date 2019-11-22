@@ -73,7 +73,7 @@ function Project(props) {
             <Buttons>
                 <Link to={"/project/" + props.projectId}>Details</Link>
                 <Divider />
-                <Link to={props.demo}>Final Product</Link>
+                <a href={props.demo}>Final Product</a>
 
             </Buttons>
         </OuterWrapper >

@@ -111,7 +111,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero />
-    <div className="container">
+    <div id="about" className="container">
       <p className="description">ABOUT ME</p>
       <h1>Education and Experience</h1>
       <Flex wrap="wrap">
