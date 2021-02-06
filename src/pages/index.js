@@ -16,10 +16,10 @@ import Project from "../components/project"
 
 const experience = [
   {
-    img: require("../images/cuwa.png"),
-    title: "Co-Founder and Developer",
-    company: "Cuwa",
-    period: "July 2019 - Present"
+    img: require("../images/cisco.jpg"),
+    title: "Software Engineer",
+    company: "Cisco",
+    period: "July 2020 - Present"
   },
   {
     img: require("../images/tgt.png"),
@@ -77,7 +77,6 @@ const Projects = () => {
       }
     }
   `)
-  console.log(data)
   return (
     data.allProject.nodes.slice(0, 3).map((project, index) =>
       <Project

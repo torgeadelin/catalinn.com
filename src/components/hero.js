@@ -26,7 +26,7 @@ export default function Hero() {
                     <Flex direction="column">
                         <p className="title">Hello, <br /> I'm Catalin</p>
                         <Line mb={[3]} />
-                        <p>Currently Final Year Student <Emoji symbol="🎒" label="backpack" />@ King’s College London,<br /> Computer Science BSc <Emoji symbol="👨🏻‍💻" label="man technologist" /></p>
+                        <p>Software Engineer <a href="https://twitter.com/cisco">@Cisco</a> <a href="https://twitter.com/webex">@Webex</a> <Emoji symbol="👨🏻‍💻" label="man technologist" /><br /> Computer Science BSc <a href="https://www.kcl.ac.uk/">@KCL</a> <Emoji symbol="🎒" label="backpack" /></p>
                     </Flex>
                 </Flex>
 
